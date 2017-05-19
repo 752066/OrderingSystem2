@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\lib\ChnCharInfo.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DishInfoBll.cs" />
+    <Compile Include="DishTypeInfoBll.cs" />
+    <Compile Include="ManagerInfoBll.cs" />
+    <Compile Include="MemberInfoBll.cs" />
+    <Compile Include="MemberTypeInfoBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,6 +58,10 @@
     <ProjectReference Include="..\CaterDal\CaterDal.csproj">
       <Project>{b4676c86-a101-4717-8898-ed8ad9135525}</Project>
       <Name>CaterDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CaterModel\CaterModel.csproj">
+      <Project>{a5f789d3-7c35-4ede-8564-7b9d0ee7d421}</Project>
+      <Name>CaterModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

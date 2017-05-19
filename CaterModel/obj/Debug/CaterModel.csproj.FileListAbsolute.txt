@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\bin\Debug\CaterModel.dll
+C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\bin\Debug\CaterModel.pdb
+C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.dll
+C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.pdb
+C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.csprojResolveAssemblyReference.cache
