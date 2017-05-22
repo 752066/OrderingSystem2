@@ -58,6 +58,12 @@
     <Compile Include="FormDishTypeInfo.Designer.cs">
       <DependentUpon>FormDishTypeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHallInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHallInfo.Designer.cs">
+      <DependentUpon>FormHallInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,12 @@
     <Compile Include="FormMemberTypeInfo.Designer.cs">
       <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTableInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTableInfo.Designer.cs">
+      <DependentUpon>FormTableInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,9 @@
     <EmbeddedResource Include="FormDishTypeInfo.resx">
       <DependentUpon>FormDishTypeInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHallInfo.resx">
+      <DependentUpon>FormHallInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMemberTypeInfo.resx">
       <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTableInfo.resx">
+      <DependentUpon>FormTableInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerInfoForm.resx">
       <DependentUpon>ManagerInfoForm.cs</DependentUpon>

@@ -28,3 +28,5 @@ C:\Users\Administrator\Desktop\OrderingSystem\CaterUI\obj\Debug\CaterUI.FormDish
 G:\杨帆\OrderingSystem\CaterUI\bin\Debug\CaterUI.exe.config
 G:\杨帆\OrderingSystem\CaterUI\obj\Debug\CaterUI.exe
 G:\杨帆\OrderingSystem\CaterUI\obj\Debug\CaterUI.pdb
+C:\Users\Administrator\Desktop\OrderingSystem\CaterUI\obj\Debug\CaterUI.FormHallInfo.resources
+C:\Users\Administrator\Desktop\OrderingSystem\CaterUI\obj\Debug\CaterUI.FormTableInfo.resources
