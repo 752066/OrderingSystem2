@@ -48,14 +48,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvList = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -84,6 +84,7 @@
             this.ddlFreeSearch.Name = "ddlFreeSearch";
             this.ddlFreeSearch.Size = new System.Drawing.Size(112, 20);
             this.ddlFreeSearch.TabIndex = 9;
+            this.ddlFreeSearch.SelectedIndexChanged += new System.EventHandler(this.ddlFreeSearch_SelectedIndexChanged);
             // 
             // ddlHallSearch
             // 
@@ -93,6 +94,7 @@
             this.ddlHallSearch.Name = "ddlHallSearch";
             this.ddlHallSearch.Size = new System.Drawing.Size(112, 20);
             this.ddlHallSearch.TabIndex = 8;
+            this.ddlHallSearch.SelectedIndexChanged += new System.EventHandler(this.ddlHallSearch_SelectedIndexChanged);
             // 
             // btnSearchAll
             // 
@@ -102,6 +104,7 @@
             this.btnSearchAll.TabIndex = 5;
             this.btnSearchAll.Text = "显示全部";
             this.btnSearchAll.UseVisualStyleBackColor = true;
+            this.btnSearchAll.Click += new System.EventHandler(this.btnSearchAll_Click);
             // 
             // label2
             // 
@@ -251,13 +254,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "名  称：";
             // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "HallTitle";
-            this.Column3.HeaderText = "厅包";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // dgvList
             // 
             this.dgvList.AllowUserToAddRows = false;
@@ -277,27 +273,7 @@
             this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(448, 428);
             this.dgvList.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "TId";
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TTitle";
-            this.Column2.HeaderText = "名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "TIsFree";
-            this.Column5.HeaderText = "是否空闲";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.dgvList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvList_CellFormatting);
             // 
             // label3
             // 
@@ -342,6 +318,34 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "添加\\修改";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TId";
+            this.Column1.HeaderText = "编号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TTitle";
+            this.Column2.HeaderText = "名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "HTitle";
+            this.Column3.HeaderText = "厅包";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TIsFree";
+            this.Column5.HeaderText = "是否空闲";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // FormTableInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -385,13 +389,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridView dgvList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

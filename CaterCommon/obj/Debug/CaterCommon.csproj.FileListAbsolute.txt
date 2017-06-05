@@ -5,3 +5,10 @@ C:\Users\Administrator\Desktop\OrderingSystem\CaterCommon\obj\Debug\CaterCommon.
 C:\Users\Administrator\Desktop\OrderingSystem\CaterCommon\obj\Debug\CaterCommon.pdb
 C:\Users\Administrator\Desktop\OrderingSystem\CaterCommon\bin\Debug\ChnCharInfo.dll
 C:\Users\Administrator\Desktop\OrderingSystem\CaterCommon\bin\Debug\ChnCharInfo.xml
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\bin\Debug\CaterCommon.dll
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\bin\Debug\CaterCommon.pdb
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\bin\Debug\ChnCharInfo.dll
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\bin\Debug\ChnCharInfo.xml
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\obj\Debug\CaterCommon.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\obj\Debug\CaterCommon.dll
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterCommon\obj\Debug\CaterCommon.pdb

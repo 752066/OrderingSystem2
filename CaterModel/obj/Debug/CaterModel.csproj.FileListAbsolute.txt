@@ -3,3 +3,8 @@ C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\bin\Debug\CaterModel.pd
 C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.dll
 C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.pdb
 C:\Users\Administrator\Desktop\OrderingSystem\CaterModel\obj\Debug\CaterModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterModel\bin\Debug\CaterModel.dll
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterModel\bin\Debug\CaterModel.pdb
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterModel\obj\Debug\CaterModel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterModel\obj\Debug\CaterModel.dll
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterModel\obj\Debug\CaterModel.pdb
