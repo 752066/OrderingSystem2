@@ -30,5 +30,10 @@ namespace CaterBll
         {
             return hiDal.Update(hi) > 0;
         }
+
+        public bool Delete(int id)
+        {
+            return hiDal.Delete(id) > 0;
+        }
     }
 }

@@ -50,6 +50,18 @@ namespace CaterUI
                     MessageBox.Show("error");
                 }
             }
+            else
+            {
+                hi.HId =int.Parse( txtId.Text);
+                if (hiBll.Update(hi))
+                {
+                    LoadList();
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
+            }
 
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
@@ -61,6 +73,28 @@ namespace CaterUI
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
             btnSave.Text = "添加";
+        }
+
+        private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = dgvList.Rows[e.RowIndex];
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtTitle.Text = row.Cells[1].Value.ToString();
+            btnSave.Text = "修改";
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int id =Convert.ToInt32(dgvList.SelectedRows[0].Cells[0].Value.ToString());
+            DialogResult result = MessageBox.Show("确定删除吗？", "", MessageBoxButtons.OKCancel);
+            if (result==DialogResult.Cancel)
+            {
+                return;
+            }
+            if (hiBll.Delete(id))
+            {
+                LoadList();
+            }
         }
     }
 }

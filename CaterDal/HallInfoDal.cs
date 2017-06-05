@@ -44,6 +44,13 @@ namespace CaterDal
             };
             return SqliteHelper.ExecuteNonQuery(sql, sp);
         }
+
+        public int Delete(int id)
+        {
+            string sql = "update HallInfo set hisdelete=1 where hid=@id";
+            SQLiteParameter p = new SQLiteParameter("@id", id);
+            return SqliteHelper.ExecuteNonQuery(sql, p);
+        }
        
     }
 }

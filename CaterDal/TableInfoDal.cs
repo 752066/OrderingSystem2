@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CaterDal
 {
-    class TableInfoDal
+   public partial class TableInfoDal
     {
+
     }
 }

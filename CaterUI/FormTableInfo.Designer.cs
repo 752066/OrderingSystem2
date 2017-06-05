@@ -352,6 +352,7 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "FormTableInfo";
             this.Text = "FormTableInfo";
+            this.Load += new System.EventHandler(this.FormTableInfo_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvList)).EndInit();
