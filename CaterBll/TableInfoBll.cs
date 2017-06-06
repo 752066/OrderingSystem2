@@ -15,5 +15,21 @@ namespace CaterBll
         {
             return tiDal.GetList(dic);
         }
+
+        public  bool Insert(TableInfo ti)
+        {
+            return tiDal.Insert(ti) > 0;
+        }
+
+        public bool Update(TableInfo ti)
+        {
+            return tiDal.Update(ti) > 0;
+        }
+
+        public bool Delete(int id)
+        {
+            return tiDal.Delete(id)>0;
+        }
+
     }
 }

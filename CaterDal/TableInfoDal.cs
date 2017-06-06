@@ -40,5 +40,39 @@ namespace CaterDal
 
             return list;
         }
+
+        public int Insert(TableInfo ti)
+        {
+            string sql = "insert into TableInfo (ttitle,thallid,tisfree,tisdelete) values (@title,@hallid,@isfree,0)";
+            SQLiteParameter[] sp =
+            {
+                new SQLiteParameter("@title",ti.HTitle),
+                new SQLiteParameter("@hallid",ti.THallId),
+                new SQLiteParameter("@isfree",ti.TIsFree)
+            };
+
+            return SqliteHelper.ExecuteNonQuery(sql, sp);
+        }
+        
+        public int Update(TableInfo ti)
+        {
+            string sql = "update TableInfo set ttitle=@title,thallid=@hallid,tisfree=@isfree where tid=@id";
+            SQLiteParameter[] sp =
+            {
+                new SQLiteParameter("@title",ti.HTitle),
+                new SQLiteParameter("@hallid",ti.THallId),
+                new SQLiteParameter("@isfree",ti.TIsFree),
+                new SQLiteParameter("@id",ti.TId),
+
+            };
+            return SqliteHelper.ExecuteNonQuery(sql, sp);
+        }
+
+        public int Delete(int id)
+        {
+            string sql = "update TableInfo set tisdelete=1 where tid=@id";
+            SQLiteParameter p = new SQLiteParameter("@id", id);
+            return SqliteHelper.ExecuteNonQuery(sql, p);
+        }
     }
 }

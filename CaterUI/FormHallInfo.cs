@@ -21,6 +21,7 @@ namespace CaterUI
         }
 
         private HallInfoBll hiBll;
+        public event Action UpdateTableInfo;
         private void FormHallInfo_Load(object sender, EventArgs e)
         {
             LoadList();
@@ -62,7 +63,7 @@ namespace CaterUI
                     MessageBox.Show("error");
                 }
             }
-
+            UpdateTableInfo();
             txtId.Text = "添加时无编号";
             txtTitle.Text = "";
             btnSave.Text = "添加";
@@ -95,6 +96,7 @@ namespace CaterUI
             {
                 LoadList();
             }
+            UpdateTableInfo();
         }
     }
 }

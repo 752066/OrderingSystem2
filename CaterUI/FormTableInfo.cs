@@ -20,6 +20,7 @@ namespace CaterUI
         }
 
         private TableInfoBll tiBll = new TableInfoBll();
+        private int currentIndex;
         private void FormTableInfo_Load(object sender, EventArgs e)
         {
             LoadSearchList();
@@ -38,6 +39,10 @@ namespace CaterUI
             ddlHallSearch.DataSource = list;
             ddlHallSearch.DisplayMember = "HTitle";
             ddlHallSearch.ValueMember = "HId";
+
+            ddlHallAdd.DataSource = hiBll.GetList();
+            ddlHallAdd.DisplayMember = "HTitle";
+            ddlHallAdd.ValueMember = "HId";
 
             List<TModel> list2 = new List<TModel>()
            {
@@ -65,6 +70,7 @@ namespace CaterUI
             }
             dgvList.AutoGenerateColumns = false;
             dgvList.DataSource = tiBll.GetList(dic);
+            
         }
 
         private void dgvList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -90,6 +96,89 @@ namespace CaterUI
             ddlFreeSearch.SelectedIndex = 0;
             ddlHallSearch.SelectedIndex = 0;
             LoadList();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            TableInfo ti = new TableInfo();
+            ti.HTitle = txtTitle.Text;
+            ti.THallId = Convert.ToInt32(ddlHallAdd.SelectedValue);
+            ti.TIsFree = rbFree.Checked;
+
+            if (txtId.Text== "添加时无编号")
+            {
+                if (tiBll.Insert(ti))
+                {
+                    LoadList();
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
+            }
+            else
+            {
+                ti.TId = Convert.ToInt32(txtId.Text);
+                if (tiBll.Update(ti))
+                {
+                    LoadList();
+                }
+            }
+
+            txtId.Text = "添加时无编号";
+            txtTitle.Text = "";
+            ddlHallAdd.SelectedIndex = 0;
+            rbFree.Checked = true;
+            btnSave.Text = "添加";
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "添加时无编号";
+            txtTitle.Text = "";
+            ddlHallAdd.SelectedIndex = 0;
+            rbFree.Checked = true;
+            btnSave.Text = "添加";
+        }
+
+        private void dgvList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentIndex = e.RowIndex;
+            var row = dgvList.Rows[e.RowIndex];
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtTitle.Text = row.Cells[1].Value.ToString();
+            ddlHallAdd.Text = row.Cells[2].Value.ToString();
+            if (Convert.ToBoolean(row.Cells[3].Value))
+            {
+                rbFree.Checked = true;
+            }
+            else
+            {
+                rbUnFree.Checked = true;
+            }
+            btnSave.Text = "修改";
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvList.SelectedRows[0].Cells[0].Value);
+            DialogResult result = MessageBox.Show("确定删除", "提示", MessageBoxButtons.OKCancel);
+            if (result==DialogResult.Cancel)
+            {
+                return;
+            }
+            if (tiBll.Delete(id))
+            {
+                LoadList();
+            }
+        }
+
+        private void btnAddHall_Click(object sender, EventArgs e)
+        {
+            FormHallInfo formhi = new FormHallInfo();
+            formhi.UpdateTableInfo += LoadList;
+            formhi.UpdateTableInfo += LoadSearchList;
+            formhi.ShowDialog();
         }
     }
 }

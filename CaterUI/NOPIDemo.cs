@@ -19,7 +19,7 @@ namespace CaterUI
         public NOPIDemo()
         {
             InitializeComponent();
-            LoadList();
+           // LoadList();
         }
         ManagerInfoBll miBll = new ManagerInfoBll();
         private void LoadList()
@@ -82,6 +82,35 @@ namespace CaterUI
             using (FileStream stream = new FileStream(@"C:\Users\Administrator\Desktop\t1.xls", FileMode.Create))
             {
                 workBook.Write(stream);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<ManagerInfo> list = new List<ManagerInfo>();
+
+            using (FileStream stream=new FileStream(@"C:\Users\Administrator\Desktop\t1.xls",FileMode.Open))
+            {
+                HSSFWorkbook workbook = new HSSFWorkbook(stream);
+
+                HSSFSheet sheet = workbook.GetSheetAt(0);
+
+                int rowIndex = 2;
+                HSSFRow row = sheet.GetRow(rowIndex);
+                while (row!=null)
+                {
+                    list.Add(new ManagerInfo()
+                    {
+                        MId = (int)row.GetCell(0).NumericCellValue,
+                        MName=row.GetCell(1).StringCellValue,
+                        MPwd=row.GetCell(2).StringCellValue,
+                        MType=row.GetCell(3).StringCellValue=="经理"?1:0
+                    });
+                    rowIndex++;
+                    row = sheet.GetRow(rowIndex);
+                }
+                dataGridView1.DataSource = list;
+
             }
         }
     }
