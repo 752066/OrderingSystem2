@@ -361,6 +361,7 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "FormTableInfo";
             this.Text = "FormTableInfo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormTableInfo_FormClosing);
             this.Load += new System.EventHandler(this.FormTableInfo_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -109,6 +109,12 @@
     <Compile Include="FormMemberTypeInfo.Designer.cs">
       <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOrderDish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderDish.Designer.cs">
+      <DependentUpon>FormOrderDish.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTableInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMemberTypeInfo.resx">
       <DependentUpon>FormMemberTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderDish.resx">
+      <DependentUpon>FormOrderDish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTableInfo.resx">
       <DependentUpon>FormTableInfo.cs</DependentUpon>

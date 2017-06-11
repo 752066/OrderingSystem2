@@ -73,3 +73,4 @@ C:\Users\Administrator\Desktop\OrderingSystem2\CaterUI\bin\Debug\NPOI.HPSF.xml
 C:\Users\Administrator\Desktop\OrderingSystem2\CaterUI\bin\Debug\NPOI.HSSF.xml
 C:\Users\Administrator\Desktop\OrderingSystem2\CaterUI\bin\Debug\NPOI.POIFS.xml
 C:\Users\Administrator\Desktop\OrderingSystem2\CaterUI\bin\Debug\NPOI.Util.xml
+C:\Users\Administrator\Desktop\OrderingSystem2\CaterUI\obj\Debug\CaterUI.FormOrderDish.resources

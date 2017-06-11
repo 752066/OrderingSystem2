@@ -15,11 +15,11 @@ namespace CaterDal
         {
             string sql = "select di.*,dti.Dtitle as DTypeTitle from DishInfo di inner join DishTypeInfo dti on di.DTypeId=dti.DId " +
                 "  where di.DIsDelete=0 and dti.DIsDelete=0";
-            if (dict.Count>0)
+            if (dict.Count > 0)
             {
                 foreach (var parm in dict)
                 {
-                    if (parm.Key== "di.Dtitle")
+                    if (parm.Key == "di.Dtitle"||parm.Key== "di.dchar")
                     {
                         sql += " and " + parm.Key + " like '%" + parm.Value + "%' ";
                     }

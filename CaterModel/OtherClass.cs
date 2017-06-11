@@ -20,4 +20,10 @@ namespace CaterModel
     {
         public string HTitle { get; set; }
     }
+
+    public partial class OrderDetailInfo
+    {
+        public string DTitle { get; set; }
+        public decimal  DPrice { get; set; }
+    }
 }

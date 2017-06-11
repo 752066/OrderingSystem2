@@ -20,7 +20,18 @@ namespace CaterUI
         }
 
         private TableInfoBll tiBll = new TableInfoBll();
+        private static FormTableInfo formTi;
+        public event Action refresh;
         private int currentIndex;
+        public static FormTableInfo create()
+        {
+            if (formTi == null)
+            {
+                formTi = new FormTableInfo();
+            }
+            return formTi;
+        }
+
         private void FormTableInfo_Load(object sender, EventArgs e)
         {
             LoadSearchList();
@@ -130,6 +141,7 @@ namespace CaterUI
             ddlHallAdd.SelectedIndex = 0;
             rbFree.Checked = true;
             btnSave.Text = "添加";
+            refresh();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -171,6 +183,7 @@ namespace CaterUI
             {
                 LoadList();
             }
+            refresh();
         }
 
         private void btnAddHall_Click(object sender, EventArgs e)
@@ -179,6 +192,11 @@ namespace CaterUI
             formhi.UpdateTableInfo += LoadList;
             formhi.UpdateTableInfo += LoadSearchList;
             formhi.ShowDialog();
+        }
+
+        private void FormTableInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            formTi = null;
         }
     }
 }
